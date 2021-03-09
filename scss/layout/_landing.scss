@@ -1,16 +1,15 @@
 .landing{
     height: 100vh;
     width: 100%;
-    background: url(/dist/Images/hero.png) no-repeat center center/cover;
+    background: url(/dist/Images/bg.png) no-repeat center bottom/cover;
     position: relative;
-    object-fit: cover;
 }
 
 .landing__text{
     position: absolute;
-    top: 40%;
-    left: 10%;
-    user-select: none;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
 }
 
 .landing__heading{
@@ -27,25 +26,4 @@
 .landing__paragraph{
     color: $white;
     font-size: 3rem;
-}
-
-.landing__scroll{
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    user-select: none;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-.landing__scroll-p{
-    color: $grey;
-    font-size: 1.8rem;
-}
-
-.landing__scroll .fa-long-arrow-alt-down{
-    text-align: center;
-    font-size: 2.2rem;
-    color: $grey;
-    margin-top: .5rem;
 }

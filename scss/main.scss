@@ -5,9 +5,12 @@
 // Base
 @import "base/base";
 
+// Components
+@import "components/modal";
+
 // Layout
+@import "layout/about";
 @import "layout/footer";
 @import "layout/header";
 @import "layout/landing";
 @import "layout/projects";
-@import "layout/skills";

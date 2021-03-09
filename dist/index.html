@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <script src="./js/script.js"></script>
+    <script defer src="./js/script.js"></script>
     <link rel="shortcut icon" href="./Images/browser-logo.png">
     <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
@@ -26,117 +26,140 @@
             <img src="./Images/logo.png" alt="Logo" class="header__logo">
             <nav class="navbar">
                 <ul class="navbar__list">
-                    <li class="navbar__link"><a href="#" class="navbar__item active">.home()</a></li>
-                    <li class="navbar__link"><a href="#" class="navbar__item">.projects()</a></li>
-                    <li class="navbar__link"><a href="#" class="navbar__item">.about()</a></li>
+                    <li class="navbar__link"><a href="#home" class="navbar__item" id="home-page">.home()</a></li>
+                    <li class="navbar__link"><a href="#projects" class="navbar__item" id="projects-page">.projects()</a></li>
+                    <li class="navbar__link"><a href="#about" class="navbar__item" id="about-page">.about()</a></li>
                 </ul>
+            </nav>
+            <div class="header__media">
+                <a class="navbar__media"><span class="fab fa-facebook-f"></span></a>
+                <a class="navbar__media"><span class="fab fa-twitter"></span></a>
                 <a class="navbar__media"><span class="fab fa-linkedin"></span></a>
                 <a class="navbar__media"><span class="fab fa-github"></span></a>
-            </nav>
+            </div>
        </div>
     </header>
 
-    <section class="landing" aria-label="Landing Section A little bit about me">
-        <div class="landing__text">
-            <h1 class="landing__heading"> &lt;h1&gt;<span class="landing__heading-blue">Hi</span>&lt;h1&gt;,</h1>
-            <p class="landing__paragraph">I'm Aleksandar, front-end developer</p>
+    <div class="container">
+        <div class="hamburger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
         </div>
-        <div class="landing__scroll">
-            <p class="landing__scroll-p">scroll down </p>
-            <span class="fas fa-long-arrow-alt-down"></span>
-        </div>
-    </section> 
-
-    <section class="projects" aria-label="Section for My Projects">
-        <div class="projects__container">
-            <div class="projects__heading">
-                <h1 class="projects__text">.projects(<span>'My Recent Work'</span>)</h1>
-                <p class="projects__paragraph">
-                    // Here are a few design projects I've worked on recently.
-                </p>
+        <section class="landing" id="home" aria-label="Landing Section A little bit about me">
+            <div class="landing__text">
+                <h1 class="landing__heading"> &lt;h1&gt;<span class="landing__heading-blue">Hi</span>&lt;h1&gt;,</h1>
+                <p class="landing__paragraph">I'm Aleksandar, front-end developer</p>
             </div>
-            <div class="projects__showcase">
-                <div class="project">
-                    <div class="project__image">
-                        <img src="./Images/site1.png" class="project__img" alt="Website Called KGM RAZE">
-                    </div>
-                    <div class="project__info">
-                       <div class="project__info-2">
-                           <h2 class="project__name">KGM Raze</h2>
-                           <p class="project__description">
-                               The Website is for selling <br>gaming products
-                           </p>
-                       </div>
-                       <div class="project__media">
-                            <a href="#" class="project__link"><img src="./Images/link.png" alt="" class="project__link-img"></a>
-                            <a href="#" class="project__link"><span class="fab fa-github"></span></a>
-                       </div>
-                    </div>
+        </section> 
+    
+         <section class="projects" id="projects" aria-label="Section for My Projects">
+            <div class="projects__container">
+                <div class="projects__heading">
+                    <h1 class="project__head">.projects(<span class="project__head-blue">'My Recent Work'</span>)</h1>
+                    <p class="project__paragraph">
+                        // Here are a few design projects I've worked on recently.
+                    </p>
                 </div>
-                <div class="project">
-                    <div class="project__image">
-                        <img src="./Images/site2.png" class="project__img" alt="Website Called KGM RAZE">
-                    </div>
-                    <div class="project__info">
-                       <div class="project__info-2">
-                           <h2 class="project__name">KGM Raze</h2>
-                           <p class="project__description">
-                               The Website is for selling <br>gaming products
-                           </p>
-                       </div>
-                       <div class="project__media">
-                            <a href="#" class="project__link"><img src="./Images/link.png" alt="" class="project__link-img"></a>
-                            <a href="#" class="project__link"><span class="fab fa-github"></span></a>
-                       </div>
-                    </div>
-                </div>
-                <div class="project">
-                    <div class="project__image">
-                        <img src="./Images/site1.png" class="project__img" alt="Website Called KGM RAZE">
-                    </div>
-                    <div class="project__info">
-                       <div class="project__info-2">
-                           <h2 class="project__name">KGM Raze</h2>
-                           <p class="project__description">
-                               The Website is for selling <br>gaming products
-                           </p>
-                       </div>
-                       <div class="project__media">
-                            <a href="#" class="project__link"><img src="./Images/link.png" alt="" class="project__link-img"></a>
-                            <a href="#" class="project__link"><span class="fab fa-github"></span></a>
-                       </div>
+                <div class="projects__container-2">
+                    <div class="project__showcase">
+                        <div class="project">
+
+                        </div>
+                        <div class="project">
+                            
+                        </div>
+                        <div class="project">
+                            
+                        </div>
+                        <div class="project">
+                            
+                        </div>
+                        <div class="project">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    
+        <main class="about" id="about">
+            <div class="about__container">
+                <div class="about__head">
+                    <h1 class="about__head-main">.about()</h1>
+                    <p class="about__paragraph">
+                        // Hi, I am Aleksandar Eror, a self-taught frontend developer, from Serbia.<br>
+                        In the near future, I plan to add React and Angular to my skills
+                    </p>
+                </div>
+                <div class="about__container-sub">
+                    <div class="about__skills">
+                        <h2 class="about__skills-head"><span>-</span>Skills</h2>
+                        <div class="about__skills-sub">
+                            <h3 class="about__description">HTML</h3>
+                            <h3 class="about__description">CSS / SASS</h3>
+                            <h3 class="about__description">JavaScript</h3>
+                            <h3 class="about__description">Adobe Photoshop</h3>
+                        </div>
+                    </div>
+                    <div class="about__skills">
+                        <h2 class="about__skills-head"><span>-</span>Soft Skills</h2>
+                        <div class="about__skills-sub">
+                            <h3 class="about__description">Highly Orginized</h3>
+                            <h3 class="about__description">Clear communication</h3>
+                            <h3 class="about__description">Attention to detail</h3>
+                            <h3 class="about__description">Innovative proble-solving</h3>
+                        </div>
+                    </div>
+                    <div class="about__skills">
+                        <h2 class="about__skills-head"><span>-</span>Languages</h2>
+                        <div class="about__languages">
+                            <h3 class="about__lang">Serbian <span>// native</span></h3>
+                            <h3 class="about__lang about__lang-certification">English // C1</h3>
+                        </div>
+                    </div>
+                    <div class="about__certification">
+                        <div class="about__certification-view">
+                            <h2 class="about__certification-head"><span>-</span>Certification</h2>
+                            <button class="btn-cert">View my certification</button>
+                        </div>
+                        <div class="about__certification-sub">
+                           <h3 class="about__cert">The Complete JavaScript Course 2021: From Zero to Expert</h3>
+                           <h3 class="about__cert">Advanced CSS and SASS: Flexbox, Grid, Animations and More!</h3>
+                           <h3 class="about__cert">20 Web Projects With Vanilla JavaScript</h3>
+                           <h3 class="about__cert">10  Mega Responsive Websites with HTML, CSS and JavaScript</h3>
+                           <h3 class="about__cert">Cambridgeg English Level 2 Certificate in ESOL International(Advanced)</h3>
+                        </div>
+                    </div>
+                    <div class="about__skills">
+                        <h2 class="about__skills-head"><span>-</span>Also Busy With</h2>
+                        <div class="about__skills-sub">
+                            <h3 class="about__description">My dogs</h3>
+                            <h3 class="about__description">Video games</h3>
+                            <h3 class="about__description">Playing basketball</h3>
+                            <h3 class="about__description">Listening podcast</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-    <main class="main">
-        <div class="main__container">
-            <h1 class="main__heading">.about()</h1>
-            <div class="main__skills">
-                
-            </div>
+    <div class="modal-container">
+        <button class="close-modal">
+            <span class="fas fa-times"></span>
+        </button>
+        <div class="modal">
+           <div class="modal__image-container">
+               <img src="./Images/cert-1.jpg" alt="" class="modal__image-cert">
+               <img src="./Images/cert-2.jpg" alt="" class="modal__image-cert">
+               <img src="./Images/cert-3.jpg" alt="" class="modal__image-cert">
+               <img src="./Images/cert-4.jpg" alt="" class="modal__image-cert">
+               <img src="./Images/cert-1.jpg" alt="" class="modal__image-cert">
+               <img src="./Images/cert-6.jpg" alt="" class="modal__image-cert">
+           </div>
         </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__info">
-                <img src="./Images/logo-grey.png" alt="Logo Grey">
-                <h2 class="footer__name">Aleksandar Eror</h2>
-            </div>
-            <div class="footer__nav">
-                <a href="#" class="footer__link">.home()</a>
-                <a href="#" class="footer__link">.projects()</a>
-                <a href="#" class="footer__link">.about()</a>
-            </div>
-            <div class="footer__mail">
-                <span class="far fa-envelope"></span>
-                
-            </div>
-        </div>
-    </footer>
-
+    </div>
+   
   </body>
 </html>

@@ -8,8 +8,34 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: 'Inconsolata', sans-serif;
+}
+
+.container{
+    max-width: 100%;
+    width: 87%;
+    margin-left: auto;
+}
+
+// Scrollbar
+::-moz-scrollbar-button:decrement,
+::-moz-scrollbar-button:increment,
+::-webkit-scrollbar-button:decrement,
+::-webkit-scrollbar-button:increment {
+  width: 0;
+}
+::-webkit-scrollbar{
+    width: 1.5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: $blue-dark;
+}
+
+::-webkit-scrollbar-thumb{
+    background: $blue;
 }
