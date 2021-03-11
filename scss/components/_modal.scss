@@ -43,6 +43,20 @@
     background: none;
     border: none;
     outline: none;
+
+    @include responsive(breakpoint6){
+        right: 4rem;
+    }
+
+    @include responsive(breakpoint6){
+        top: 1rem;
+        right: 3rem;
+    }
+
+    @include responsive(breakpoint2){
+        top: 1rem;
+        right: 1rem;
+    }
 }
 
 .close-modal .fa-times{
@@ -61,8 +75,9 @@
 }
 
 .modal__image-cert{
-    width: 45rem;
-    height: 35rem;
+    width: 50rem;
+    height: 40rem;
     object-fit: contain;
-    margin: 2rem;
+    margin: 1rem;
+
 }

@@ -3,6 +3,18 @@
     width: 100%;
     background: url(/dist/Images/bg.png) no-repeat center bottom/cover;
     position: relative;
+
+    @include responsive(breakpoint4){
+        background-size: 100% 100%;
+    }
+
+    @include responsive(breakpoint2){
+        background: linear-gradient(
+           to bottom,
+           #060606,
+            $blue-dark
+        );
+    }
 }
 
 .landing__text{
@@ -10,20 +22,40 @@
     top: 50%;
     left: 5%;
     transform: translateY(-50%);
+
+    @include responsive(breakpoint3){
+        left: 2%;
+    }
+
+    @include responsive(breakpoint3){
+        left: 4%;
+    }
 }
 
 .landing__heading{
     color: $grey;
     font-size: 4rem;
     letter-spacing: .1rem;
+
+    @include responsive(breakpoint2){
+        font-size: 2.5rem;
+    }
 }
 
 .landing__text .landing__heading-blue{
     color: $blue;
     font-size: 8rem;
+
+    @include responsive(breakpoint2){
+        font-size: 5rem;
+    }
 }
 
 .landing__paragraph{
     color: $white;
     font-size: 3rem;
+
+    @include responsive(breakpoint2){
+        font-size: 2.5rem;
+    }
 }

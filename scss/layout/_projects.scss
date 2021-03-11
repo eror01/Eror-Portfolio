@@ -2,17 +2,30 @@
     width: 100%;
     height: 100vh;
     background: url(/dist/Images/project-bg.png) no-repeat bottom center/cover;
+
+    @include responsive(breakpoint4){
+        background-size: 100% 100%;
+    }
+
+    @include responsive(breakpoint2){
+        background: linear-gradient(
+           to bottom,
+           $blue-dark,
+           #060606
+        );
+    }
 }
 
 .projects__container{
     height: 100%;
     width: 95%;
     margin: 0 auto;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects__heading{
-    padding-top: 2rem;
+    margin-top: 1rem;
 }
 
 .project__head{
@@ -27,48 +40,185 @@
     font-weight: 500;
 }
 
-.projects__container-2{
-    width: 100%;
-    height: 80rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.projects__container-sub{
+    max-width: 90%;
+    height: 60%;
+    margin: auto;
+    margin-top: 9rem;
+    position: relative;
+
+    @include responsive(breakpoint3){
+        max-width: 77%;
+        margin-top: 15rem;
+    }
+
+    @include responsive(breakpoint2){
+        max-width: 43%;
+        width: 100%;
+    }
+
+    @include responsive(breakpoint1){
+        max-width: 56%;
+    }
 }
 
-.project__showcase{
+.projects__showcase-container{
+    overflow: hidden;
     width: 100%;
     height: 100%;
-    display: flex;
+    white-space: nowrap;
+
+}
+
+.btn-projects{
+    position: absolute;
+    top: 36%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    z-index: 50;
+    cursor: pointer;
+
+    @include responsive(breakpoint4){
+        top: 34%;
+    }
+
+    @include responsive(breakpoint3){
+        top: 31%;
+    }
+}
+
+.btn-projects:focus{
+    outline: none;
+}
+
+.btn-projects .fas{
+    color: $blue;
+    font-size: 3rem;
+}
+
+.btn-next{
+    right: 0;
+}
+.btn-prev{
+    display: none;
+    left: .5rem;
+}
+
+.btn-next.hide{
+    display: none;
+}
+
+.btn-prev.show{
+    display: block;
+}
+
+.projects__showcase{
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    transition: transform .5s ease;
+}
+
+.projects__showcase-sub{
+    width: 45rem;
+    height: 40rem;
+    flex-shrink: 0;
+    margin: 0 2rem 0 1rem;
+
+    @include responsive(breakpoint5){
+        margin: 0 2rem 0 5rem;
+    }
+
+    @include responsive(breakpoint4){
+        margin: 0 1rem 0 3rem;
+    }
+
+    @include responsive(breakpoint3){
+        margin: 0 .5rem 0 1.5rem;
+    }
+
+    @include responsive(breakpoint2){
+        margin: 0 1rem 0 1.5rem;
+        width: 38rem;
+    }
+
+    @include responsive(breakpoint1){
+        margin: 0 4rem;
+        width: 35rem;
+    }
 }
 
 .project{
-    width: 45rem;
-    height: 45rem;
-    background-color: #999;
-    margin: 0 2rem;
+    width: 100%;
+    height: 100%;
 }
-// .project__link-img{
-//     width: 3.5rem;
-//     margin: 0 2rem;
-// }
 
-// .project__link .fa-github{
-//     color: $blue;
-//     font-size: 3.5rem;
-// }
+.project__image-container{
+    width: 100%;
+    height: 50%;
+}
 
-// .project:hover .project__info{
-//     border-bottom: .1rem solid rgba($grey, .2);
-//     border-right: .1rem solid rgba($grey, .2);
-//     border-left: .1rem solid rgba($grey, .2);
-//     border-radius: .5rem;
-//     box-shadow: 0 2px 2px 0 rgba($grey, .1);
-// }
+.project__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-@media screen and (max-width: 1500px){
+.project__info{
+    width: 70%;
+    height: 50%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 1.5rem;
+    box-shadow: 0 0 .2rem .1rem rgba($grey, .3);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
 
+.project__info-inner{
+    width: 100%;
+    height: 50%;
+    margin-bottom: 5rem;
+}
+
+.project__description{
+    color: $blue;
+    font-size: 2.3rem;
+    margin: 1rem 0;
+}
+
+.project__description-paragraph{
+    color: $grey;
+    font-size: 1.5rem;
+}
+
+.project__info-touch{
+    width: 100%;
+    height: 50%;
+    border-top: .1rem solid rgba($grey, .3);
+}
+
+.project__link span{
+    transition: color .3s ease;
+}
+
+.project__link .fa-github{
+    margin: 1rem;
+    font-size: 3rem;
+    color: $grey;
+}
+
+.project__link .fa-link{
+    color: $grey;
+    font-size: 2.8rem;
+}
+
+.project__link span:hover{
+    color: $blue;
 }

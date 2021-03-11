@@ -9,6 +9,18 @@
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+
+    @include responsive(breakpoint4){
+        font-size: 59%;
+    }
+
+    @include responsive(breakpoint3){
+        font-size: 55%;
+    }
+
+    @include responsive(breakpoint1){
+        font-size: 45%;
+    }
 }
 
 body{
@@ -16,9 +28,16 @@ body{
 }
 
 .container{
+    position: relative;
     max-width: 100%;
     width: 87%;
+    height: 100%;
     margin-left: auto;
+    transition: width .3s;
+
+    @include responsive(breakpoint5){
+        width: 100%;
+    }
 }
 
 // Scrollbar
@@ -29,7 +48,7 @@ body{
   width: 0;
 }
 ::-webkit-scrollbar{
-    width: 1.5rem;
+    width: 1rem;
 }
 
 ::-webkit-scrollbar-track{
