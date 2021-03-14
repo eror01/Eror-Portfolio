@@ -1,7 +1,7 @@
 .landing{
     height: 100vh;
     width: 100%;
-    background: url(/dist/Images/bg.png) no-repeat center bottom/cover;
+    background: url(../Images/bg.png) no-repeat center bottom/cover;
     position: relative;
 
     @include responsive(breakpoint4){

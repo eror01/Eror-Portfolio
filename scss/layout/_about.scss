@@ -1,19 +1,20 @@
 .about{
     width: 100%;
     height: 100vh;
-    background-image: url(/dist/Images/aboutmebckg.png);
-    background: url(/dist/Images/aboutmebckg.png) no-repeat bottom center/cover;
+    background: url(../Images/aboutmebckg.png) no-repeat bottom center/cover;
 
     @include responsive(breakpoint4){
         background-size: 100% 100%;
     }
 
     @include responsive(breakpoint2){
-         background: linear-gradient(
+        background: linear-gradient(
             to bottom,
             #060606,
             $blue-dark
         );
+        height: 100%;
+        padding: 0 0 3rem 0;
     }
 }
 

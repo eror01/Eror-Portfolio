@@ -1,7 +1,7 @@
 .projects{
     width: 100%;
     height: 100vh;
-    background: url(/dist/Images/project-bg.png) no-repeat bottom center/cover;
+    background: url(../Images/project-bg.png) no-repeat bottom center/cover;
 
     @include responsive(breakpoint4){
         background-size: 100% 100%;
@@ -41,24 +41,23 @@
 }
 
 .projects__container-sub{
-    max-width: 90%;
+    max-width: 94%;
     height: 60%;
     margin: auto;
     margin-top: 9rem;
     position: relative;
 
     @include responsive(breakpoint3){
-        max-width: 77%;
+        max-width: 100%;
         margin-top: 15rem;
     }
 
     @include responsive(breakpoint2){
-        max-width: 43%;
-        width: 100%;
+        max-width: 52%;
     }
 
     @include responsive(breakpoint1){
-        max-width: 56%;
+        max-width: 52%;
     }
 }
 
@@ -80,11 +79,19 @@
     cursor: pointer;
 
     @include responsive(breakpoint4){
-        top: 34%;
+        top: 37.5%;
     }
 
     @include responsive(breakpoint3){
-        top: 31%;
+        top: 35.5%;
+    }
+
+    @include responsive(breakpoint2){
+        top: 34.5%;
+    }
+
+    @include responsive(breakpoint1){
+        top: 28%;
     }
 }
 
@@ -99,10 +106,22 @@
 
 .btn-next{
     right: 0;
+
+    @include responsive(breakpoint3){
+        right: 4rem;
+    }
+
+    @include responsive(breakpoint2){
+        right: 0;
+    }
+
+    @include responsive(breakpoint1){
+        right: 0;
+    }
 }
 .btn-prev{
     display: none;
-    left: .5rem;
+    left: 0;
 }
 
 .btn-next.hide{
@@ -125,28 +144,33 @@
     width: 45rem;
     height: 40rem;
     flex-shrink: 0;
-    margin: 0 2rem 0 1rem;
+    margin: 0 2rem;
+
+    
+    @include responsive(breakpoint6){
+        margin: 0 2rem 0 9rem;
+    }
 
     @include responsive(breakpoint5){
-        margin: 0 2rem 0 5rem;
+        margin: 0 2rem 0 8rem;
     }
 
     @include responsive(breakpoint4){
-        margin: 0 1rem 0 3rem;
+        margin: 0 6rem;
     }
 
     @include responsive(breakpoint3){
-        margin: 0 .5rem 0 1.5rem;
+        margin: 0 6rem;
     }
 
     @include responsive(breakpoint2){
-        margin: 0 1rem 0 1.5rem;
-        width: 38rem;
+        margin: 0 9rem;
+        width: 35rem;
     }
 
     @include responsive(breakpoint1){
-        margin: 0 4rem;
-        width: 35rem;
+        margin: 0 2.8rem;
+        width: 34rem;
     }
 }
 
@@ -179,6 +203,10 @@
     box-shadow: 0 0 .2rem .1rem rgba($grey, .3);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
+
+    @include responsive(breakpoint2){
+        width: 75%;
+    }
 }
 
 .project__info-inner{
