@@ -40,7 +40,6 @@ const highlightActive = () =>{
 
 };
 
-
 // Event Listeners
 window.addEventListener('scroll', highlightActive);
 window.addEventListener('click', highlightActive);
@@ -56,11 +55,13 @@ closeBtn.addEventListener('click', () => {
     modalContainer.classList.remove('show-modal');
     document.querySelector('body').style.overflow = 'visible';
 });
+
 // Clicking on modal__container closes
 modalContainer.addEventListener('click', e =>{
         modalContainer.classList.remove('show-modal');
         document.querySelector('body').style.overflow = 'visible';
 });
+
 // Pressing escape key closes modal__container
 window.addEventListener('keydown', e => {
     if(e.key === 'Escape'){
@@ -68,14 +69,17 @@ window.addEventListener('keydown', e => {
         document.querySelector('body').style.overflow = 'visible';
     }
 });
+
 window.addEventListener('resize', () =>{
     projectsContainerWidth = document.querySelector('.projects__container-sub').offsetWidth;
 });
+
 // Hamburger menu
 hamburgerMenu.addEventListener('click', () => {
     header.classList.add('change');
     hamburgerMenu.style.zIndex = '0';
 });
+
 closeHeader.addEventListener('click', () =>{
     header.classList.remove('change');
     hamburgerMenu.style.zIndex = '1000';
@@ -93,6 +97,7 @@ nextBtn.addEventListener('click', () =>{
             nextBtn.classList.add('hide');
         }
 });
+
 prevBtn.addEventListener('click', () =>{
     index--;
     nextBtn.classList.remove('hide');
