@@ -33,5 +33,15 @@
             @content;
         }
     }
+    @if $media == breakpoint1sm{
+        @media only screen and (max-width: 550px){
+            @content;
+        }
+    }
+    @if $media == breakpoint1xsm{
+        @media only screen and (max-width: 390px){
+            @content;
+        }
+    }
    
 }

@@ -21,6 +21,10 @@ html{
     @include responsive(breakpoint1){
         font-size: 45%;
     }
+
+    @include responsive(breakpoint1sm){
+        font-size: 42%;
+    }
 }
 
 body{
