@@ -20,12 +20,13 @@
     height: 100%;
     width: 95%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 
-.projects__heading{
-    margin-top: 1rem;
+
+.project__paragraph{
+    color: $grey;
+    font-size: 1.8rem;
 }
 
 .project__head{

@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel dist/js/ -d dist/build/",
     "sass": "node-sass -w scss/ -o /dist/css/"
   },
   "author": "Aleksandar Eror",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "node-sass": "^5.0.0"
   }
 }

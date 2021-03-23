@@ -31,6 +31,10 @@ body{
     font-family: 'Inconsolata', sans-serif;
 }
 
+body.hideOverflow{
+    overflow: hidden;
+}
+
 .container{
     position: relative;
     max-width: 100%;
