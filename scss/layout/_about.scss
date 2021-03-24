@@ -1,6 +1,7 @@
 .about{
     width: 100%;
     height: 100vh;
+    display: block;
     background: url(../Images/aboutmebckg.png) no-repeat bottom center/cover;
 
     @include responsive(breakpoint4){
