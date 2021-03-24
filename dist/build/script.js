@@ -1,7 +1,9 @@
 'use strict';
 
 var modalContainer = document.querySelector('.modal-container');
+var modalCv = document.querySelector('.modal-cv');
 var certBtn = document.querySelector('.btn-cert');
+var btnCv = document.querySelector('.btn-cv');
 var closeBtn = document.querySelector('.close-modal');
 var hamburgerMenu = document.querySelector('.hamburger-menu');
 var header = document.querySelector('.header');
@@ -50,6 +52,31 @@ window.addEventListener('click', highlightActive);
 certBtn.addEventListener('click', function () {
     modalContainer.classList.add('show-modal');
     document.querySelector('body').classList.add('hideOverflow');
+});
+
+// Open cv modal
+btnCv.addEventListener('click', function () {
+    modalCv.classList.add('show-cv');
+    document.querySelector('body').classList.add('hideOverflow');
+});
+
+// Closing modal cv
+closeBtn.addEventListener('click', function () {
+    modalCv.classList.remove('show-cv');
+    document.querySelector('body').classList.remove('hideOverflow');
+});
+
+modalCv.addEventListener('click', function (e) {
+    modalCv.classList.remove('show-cv');
+    document.querySelector('body').classList.remove('hideOverflow');
+});
+
+// Closing modal cv on escape
+window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        modalCv.classList.remove('show-cv');
+        document.querySelector('body').classList.remove('hideOverflow');
+    }
 });
 
 // Closing modal

@@ -1,5 +1,7 @@
 const modalContainer = document.querySelector('.modal-container');
+const modalCv = document.querySelector('.modal-cv');
 const certBtn = document.querySelector('.btn-cert');
+const btnCv = document.querySelector('.btn-cv');
 const closeBtn = document.querySelector('.close-modal');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const header = document.querySelector('.header');
@@ -10,6 +12,7 @@ const projectsShow = document.querySelector('.projects__showcase');
 
 let projectsContainerWidth = document.querySelector('.projects__container-sub').offsetWidth;
 let index = 0;
+
 
 // Functions
 const highlightActive = () =>{
@@ -51,6 +54,31 @@ certBtn.addEventListener('click', () => {
     document.querySelector('body').classList.add('hideOverflow');
 });
 
+// Open cv modal
+btnCv.addEventListener('click', () =>{
+    modalCv.classList.add('show-cv');
+    document.querySelector('body').classList.add('hideOverflow');
+});
+
+// Closing modal cv
+closeBtn.addEventListener('click', () => {
+    modalCv.classList.remove('show-cv');
+    document.querySelector('body').classList.remove('hideOverflow');
+});
+
+modalCv.addEventListener('click', e =>{
+    modalCv.classList.remove('show-cv');
+    document.querySelector('body').classList.remove('hideOverflow');
+});
+
+// Closing modal cv on escape
+window.addEventListener('keydown', e => {
+    if(e.key === 'Escape'){
+        modalCv.classList.remove('show-cv');
+        document.querySelector('body').classList.remove('hideOverflow');
+    }
+});
+
 // Closing modal
 closeBtn.addEventListener('click', () => {
     modalContainer.classList.remove('show-modal');
@@ -59,8 +87,8 @@ closeBtn.addEventListener('click', () => {
 
 // Clicking on modal__container closes
 modalContainer.addEventListener('click', e =>{
-        modalContainer.classList.remove('show-modal');
-        document.querySelector('body').classList.remove('hideOverflow');
+    modalContainer.classList.remove('show-modal');
+    document.querySelector('body').classList.remove('hideOverflow');
 });
 
 // Pressing escape key closes modal__container

@@ -170,8 +170,8 @@
     color: $grey;
     padding: 0 4rem;
     margin-left: .5rem;
-    border: 1px solid rgba($grey, .3);
-    opacity: .3;
+    border: 1px solid rgba($grey, .5);
+    opacity: .8;
     cursor: pointer;
     transition: all .5s ease;
 
@@ -196,6 +196,32 @@
 }
 
 .btn-cert:active{
+    transform: scale(.98);
+}
+
+.btn-cv{
+    font-size: 1.6rem;
+    background: none;
+    color: $grey;
+    padding: .5rem 2rem;
+    margin-left: .5rem;
+    border: 1px solid rgba($grey, .5);
+    opacity: .8;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.btn-cv:hover{
+    opacity: 1;
+    border: 1px solid rgba($blue, .1);
+    box-shadow: 0 0 .2rem .2rem rgba($blue, .3);
+}
+
+.btn-cv:focus{
+    outline: none;
+}
+
+.btn-cv:active{
     transform: scale(.98);
 }
 
