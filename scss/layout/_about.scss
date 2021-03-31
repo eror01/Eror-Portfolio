@@ -191,10 +191,6 @@
     box-shadow: 0 0 .2rem .2rem rgba($blue, .3);
 }
 
-.btn-cert:focus{
-    outline: none;
-}
-
 .btn-cert:active{
     transform: scale(.98);
 }
@@ -215,10 +211,6 @@
     opacity: 1;
     border: 1px solid rgba($blue, .1);
     box-shadow: 0 0 .2rem .2rem rgba($blue, .3);
-}
-
-.btn-cv:focus{
-    outline: none;
 }
 
 .btn-cv:active{
